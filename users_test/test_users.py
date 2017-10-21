@@ -3,11 +3,13 @@ from project.users import get_users
 from unittest.mock import patch
 
 class BasicTests(unittest.TestCase):
-    @patch('project.users.requests.get')  # Mock 'requests' module 'get' method.
-    def test_request_response(self, mock_get):
-        """ Send a request to the API server to retrieve users."""
-        mock_get.return_value.status_code = 200 # Mock status code of response.
-        response = get_users()
+    def test_request_response(self):
+        with patch('project.users.requests.get') as mock_get:
+            # Configure the mock to return a response with status code 200.
+            mock_get.return_value.status_code = 200
+
+            # Call the function, which will send a request to the server.
+            response = get_users()
 
         # Assert that the request-response cycle completed successfully.
         self.assertEqual(response.status_code, 200)
