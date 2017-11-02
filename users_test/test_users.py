@@ -1,10 +1,10 @@
 import unittest
-from project.users import get_users, get_user
+from users import get_users, get_user
 from unittest.mock import patch, Mock
 
 class BasicTests(unittest.TestCase):
     def test_request_response(self):
-        mock_get_patcher = patch('project.users.requests.get')
+        mock_get_patcher = patch('users.requests.get')
         users = [{
             "id": 0,
             "first_name": "Dell",
@@ -29,7 +29,7 @@ class BasicTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json(), users)
 
-    @patch('project.users.get_users')
+    @patch('users.get_users')
     def test_get_one_user(self, mock_get_users):
         """Test for getting one user using their userID"""
         users = [
