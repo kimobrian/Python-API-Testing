@@ -40,7 +40,7 @@ class BasicTests(unittest.TestCase):
         mock_get_users.return_value = Mock()
         mock_get_users.return_value.json.return_value = users
         user = get_user(2)
-        self.assertEqual(user, users[2])
+        self.assertEqual(user, users[4])
 
 if __name__ == "__main__":
     unittest.main()
