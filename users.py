@@ -1,7 +1,7 @@
 import requests
 import json
 
-USERS_URL = 'http://localhost:7800/customers'
+USERS_URL = 'http://jsonplaceholder.typicode.com/users'
 def get_users():
     """Get list of users"""
     response = requests.get(USERS_URL)
