@@ -10,7 +10,7 @@ Testing Python APIs
   - Using a Patcher
 - Mocking the whole function behavior - Demonstrate and explain how its done.
 - Mocking third party functions - Demonstrate and explain how to mock out own functions/modules in other functions.
-- Continuous integration with Circle CI - Brief walk through of how to combine testing and CI to make our development smooth, use case Github and Circle CI.
+- ~Continuous integration with Circle CI - Brief walk through of how to combine testing and CI to make our development smooth, use case Github and Circle CI.~
 - Conclusion - Brief summary touching on mocking and CI.
 
 ## Setup.
